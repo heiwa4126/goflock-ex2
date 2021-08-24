@@ -1,3 +1,5 @@
+//go:build linux || darwin || aix
+
 package ex5
 
 // const count_file = "/tmp/goflock-ex2-count5"
