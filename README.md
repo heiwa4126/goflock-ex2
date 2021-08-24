@@ -1,4 +1,4 @@
-# goflock-ex1
+# goflock-ex2
 
 GoLangで複数プロセスで排他制御を行うサンプルコード。
 
