@@ -8,8 +8,8 @@ import (
 	"github.com/gofrs/flock"
 )
 
-const count_file = "/tmp/goflock-ex1-count5"
-const lock_file = "/tmp/goflock-ex1-count5.lock"
+const count_file = "/tmp/goflock-ex2-count5"
+const lock_file = "/tmp/goflock-ex2-count5.lock"
 
 func InitCounter() (cnt uint64, err error) {
 	f, err := os.Create(count_file)

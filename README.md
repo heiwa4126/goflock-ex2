@@ -46,6 +46,6 @@ $INIT ; $FINC & $FINC & $FINC
 Linuxは
 終わったら
 ```sh
-rm /tmp/goflock-ex1-count*
+rm /tmp/goflock-ex2-count*
 ```
 すること。
