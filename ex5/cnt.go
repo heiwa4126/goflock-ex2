@@ -61,3 +61,8 @@ func IncCounter10000(lock bool) (cnt uint64, err error) {
 	}
 	return
 }
+
+func Files() (string, string) {
+	// support
+	return count_file, lock_file
+}

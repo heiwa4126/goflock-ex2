@@ -36,6 +36,10 @@ func main() {
 		cnt, err = ex5.IncCounter10000(false)
 	case "flockinc":
 		cnt, err = ex5.IncCounter10000(true)
+	case "files":
+		cntf, lockf := ex5.Files()
+		fmt.Printf("%s %s\n", cntf, lockf)
+		return
 	default:
 		help()
 	}
