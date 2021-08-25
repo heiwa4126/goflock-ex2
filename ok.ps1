@@ -1,10 +1,10 @@
+#!/usr/bin/env pwsh
 # 30000になる
-$bin = ".\goflock-ex2.exe"
-
-# $INIT ; $INC & $INC & $INC
-&$bin init
-$inc = {&$bin flockinc}
-Start-Job -ScriptBlock $inc
-Start-Job -ScriptBlock $inc
-Start-Job -ScriptBlock $inc
-Get-Job | Wait-Job
+.\goflock-ex2.exe init
+$job1 = & { .\goflock-ex2.exe flockinc } &
+$job2 = & { .\goflock-ex2.exe flockinc } &
+$job3 = & { .\goflock-ex2.exe flockinc } &
+Get-Job | Wait-Job | Out-Null
+Receive-Job -Name $job1.Name
+Receive-Job -Name $job2.Name
+Receive-Job -Name $job3.Name
